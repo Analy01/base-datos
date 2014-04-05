@@ -6,15 +6,10 @@
 
 package com.jc.model;
 
-/**
- *
- * @author campitos
- */
-
 import java.sql.*;
 public class Conexion {
     
-    public Connection conectarse()throws Exception{
+    public static Connection conectarse()throws Exception{
         String url="jdbc:oracle:thin:@localhost:1521:XE";
        Class.forName("oracle.jdbc.OracleDriver");
        Connection con=DriverManager.getConnection(url,"campitos","campitos");

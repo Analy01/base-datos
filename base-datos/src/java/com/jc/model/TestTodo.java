@@ -10,22 +10,15 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author campitos
- */
+
 public class TestTodo {
     public static void main(String...x)throws Exception{
         System.out.println("probando usuario");
         
         
-        DAOUsuario dao=new DAOUsuario();
-       
-        ArrayList<Usuario> us= dao.buscarTodos();
-        for(Usuario un:us){
-            System.out.println(un.getId()+"-"+un.getNombre()+"-"+un.getSueldo());
-       
-        }
-        System.out.println("termino de leer "+us.size()+ " usuarios");
+       for(Usuario u:DAOUsuario.buscarTodos()){
+           System.out.println(u.getLogin());
+
+       }
     }
 }
